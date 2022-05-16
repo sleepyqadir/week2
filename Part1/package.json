@@ -1,5 +1,14 @@
 {
   "name": "hardhat-project",
+  "scripts": {
+    "compile:circuits": "chmod u+x ./scripts/compile-circuit.sh && ./scripts/compile-circuit.sh && node scripts/bump-solidity.js",
+    "compile:contracts": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "start": "npm run compile:circuits && npm run compile:contracts && npm run test",
+    "import:zkeys": "cp circuits/circuit_final.zkey web/zkeys && cp circuits/verification_key.json web/zkeys && cp circuits/circuit_js/circuit.wasm web/zkeys && cp circuits/circuit_js/witness_calculator.js web/src",
+    "deploy": "node ./scripts/deploy.js",
+    "start:node": "node ./scripts/deploy.js && npx hardhat node"
+  },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-waffle": "^2.0.3",

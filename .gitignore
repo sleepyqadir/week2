@@ -1,4 +1,9 @@
 node_modules
+/node_modules
+/Part1/node_modules
+/Part1/web/node_modules
+/Part/cache
+/Part1/artifacts
 .env
 coverage
 coverage.json

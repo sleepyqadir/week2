@@ -1,0 +1,33 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve src/index.html",
+    "build": "parcel build",
+    "serve-static": "cd zkeys && http-server --cors -p 8000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "circomlibjs": "^0.1.2",
+    "ethers": "^5.6.6",
+    "parcel": "^2.0.1",
+    "snarkjs": "^0.4.10"
+  },
+  "alias": {
+    "process": false
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "http-server": "^14.1.0",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "typescript": "^4.6.4"
+  }
+}
